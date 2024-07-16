@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 # AI Interview Mocker
 =======
-By Shivam Mangal
 ![AI Mocker Interview App](https://github.com/rrs301/AI-Interview-mocker/assets/20216436/da9cce8e-ce42-47fb-985d-f23b46c6a023)
 >>>>>>> 776afce (update readme)
 
