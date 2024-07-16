@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # AI Interview Mocker
+=======
+By Shivam Mangal
+![AI Mocker Interview App](https://github.com/rrs301/AI-Interview-mocker/assets/20216436/da9cce8e-ce42-47fb-985d-f23b46c6a023)
+>>>>>>> 776afce (update readme)
 
 AI Interview Mocker is a web app to help users practice and improve their interview skills using AI. Built with Next.js, Drizzle ORM, Neon DB, Clerk, and Gemini API.
 
