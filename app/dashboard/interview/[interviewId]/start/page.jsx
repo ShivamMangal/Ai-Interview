@@ -26,13 +26,15 @@ function StartInterview({ params }) {
 
       if (result.length > 0) {
         try {
-          const cleanJsonString = removeControlCharacters(result[0].jsonMockResp);
+          const rawJsonString = result[0].jsonMockResp;
+          const cleanJsonString = extractJsonArray(rawJsonString);
           const jsonMockResp = JSON.parse(cleanJsonString);
           console.log(jsonMockResp);
           setMockInterviewQuestion(jsonMockResp);
           setInterviewData(result[0]);
         } catch (jsonError) {
           console.error('Error parsing JSON:', jsonError);
+          console.log('Raw JSON String:', result[0].jsonMockResp);
         }
       } else {
         console.error('No interview found with the given ID.');
@@ -43,10 +45,13 @@ function StartInterview({ params }) {
   };
 
   /**
-   * Helper function to remove control characters from a JSON string
+   * Helper function to extract JSON array from a string with additional text
    */
-  function removeControlCharacters(jsonString) {
-    return jsonString.replace(/[\x00-\x1F\x7F]/g, "");
+  function extractJsonArray(jsonString) {
+    // Find the start and end of the JSON array
+    const startIndex = jsonString.indexOf('[');
+    const endIndex = jsonString.lastIndexOf(']') + 1;
+    return jsonString.substring(startIndex, endIndex);
   }
 
   return (
