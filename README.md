@@ -1,4 +1,4 @@
-# BY SHIVAM MANGAL
+# BY Shivam Mangal
 # AI Interview Mocker
 
 AI Interview Mocker is a web app to help users practice and improve their interview skills using AI. Built with Next.js, Drizzle ORM, Neon DB, Clerk, and Gemini API.
